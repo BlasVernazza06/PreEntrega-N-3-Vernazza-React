@@ -4,8 +4,7 @@ const CartWidget = ({counter}) => {
         <div className='cartSection'>
           <img src="./icons8-carrito-de-compras-32.svg"/>
           <p className="counterCartWidget">{counter}</p>
-        </div>
-          
+        </div> 
       </>
     )
 }
