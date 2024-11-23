@@ -1,4 +1,4 @@
-import './CartWidget'
+import { NavLink } from 'react-router-dom'
 import CartWidget from './CartWidget'
 
 function NavBar() {
@@ -8,14 +8,15 @@ function NavBar() {
         <header>
             <div className="nav-bar">
                 <div className="logo-nav animate__animated animate__fadeInDown">
-                    <p>AeroViajes</p>
+                    <NavLink to='/' className="brandLink">
+                        <p>AeroViajes</p>
+                    </NavLink>
                 </div>
                 <ul className="nav-list animate__animated animate__fadeInDown">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="pages/Productos.html">Shop</a></li>
-                    <li><a href="pages/AcercaDe.html">About</a></li>
-                    <li><a href="pages/Contactos.html">Contact</a></li>
-                    <li><a href="pages/Ayuda.html">Help</a></li>
+                    <li><NavLink to='/'>Home</NavLink></li>
+                    <li><NavLink to='/products/Nuevos'>Nuevos Ingresos</NavLink></li>
+                    <li><NavLink to='/products/Ofertas'>Ofertas</NavLink></li>
+                    <li><NavLink to='/products/mas vendidos'>Mas Vendidos</NavLink></li>
                 </ul>
                 <CartWidget counter={10}/>
             </div>

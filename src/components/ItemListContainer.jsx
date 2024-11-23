@@ -1,18 +1,27 @@
 import { useEffect, useState } from "react"
 import ItemList from "./ItemList"
 import { getProducts } from "../mock/data"
+import { useParams } from "react-router-dom"
 
 const ItemListContainer = ({greeting, span}) => {
     const [productos, setProductos] = useState([])
     const [loading, setLoading] = useState(false)
-
+    const {category}= useParams()
+    
     useEffect(() =>{
         setLoading(true)
         getProducts()
-        .then((res) => setProductos(res))
+        .then((res) =>{
+            if (category) {
+                setProductos(res.filter((prod)=> prod.category === category))
+            } else {
+                setProductos(res)
+            }
+        
+        })
         .catch((error) => new Error(error))
         .finally(() => setLoading(false))
-    },[])
+    },[category])
 
     console.log(productos)
 
@@ -38,7 +47,12 @@ const ItemListContainer = ({greeting, span}) => {
             </div> 
 
             <div id="shop-sec">
-                {loading ? <p>Cargando...</p> : <ItemList productos={productos} stock={12} onAdd={onAdd}/>}
+                {loading ? 
+                    <div className="loadMessage">
+                         <p>Cargando...</p>
+                    </div> 
+                    : 
+                    <ItemList productos={productos} stock={12} onAdd={onAdd}/>}
             </div>
         </>
     )

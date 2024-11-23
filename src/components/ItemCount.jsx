@@ -17,7 +17,10 @@ const ItemCount = ({stock , onAdd}) => {
 
      const onAddHandle = () => {
           onAdd(count)
+          setCount(1)
      }
+
+
 
      return (
           <>
@@ -35,4 +38,4 @@ const ItemCount = ({stock , onAdd}) => {
      
 }
 
-export default ItemCount
+export default ItemCount;
