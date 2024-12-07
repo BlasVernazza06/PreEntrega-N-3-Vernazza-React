@@ -1,8 +1,26 @@
-# React + Vite
+# Coder App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este proyecto fue realizado para enseñar las bases de react con javascript en CoderHouse
 
-Currently, two official plugins are available:
+![Image](/public/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Instalacion
+
+- Clone el repositorio
+- Ejecute npm install para instalar las dependencias y crear la carpeta node_modules
+- Coloquese en la carpeta clonada 
+- Ejecute npm run dev para levantarlo en servidor local
+
+### Version Host 💻
+
+Si desea ver el proyecto online, puede ingresar al siguiente link [AeroViajes] ()
+
+### Librerias utilizadas en este proyecto 📚
+
+- [SweetAlert]() : Utilizada para Notificaciones del sistema
+- [Firebase]() : Utilizada como base de datos
+- [React Router Dom]() : Utilizada para la navegacion por rutas
+- [React Spinners]() : Componentes para estado de Loading del sistema
+
+
+### Desarrollado por Blas Vernazza 🧑
